@@ -62,12 +62,21 @@ body {
 .content {
   max-height: 0;
   overflow: hidden;
-  padding: 0;
-  transition: max-height 0.3s ease, padding 0.3s ease;
   color: var(--Grayishpurple);
+  text-align: left;
+  visibility: hidden;
+  padding: 0 2rem;
+  transition: all 0.3s ease;
 }
 
-.content.expand {
-  max-height: 2000px; /* Adjust this value as needed */
-  padding: 1rem 2rem;
+.expand {
+  max-height: 1000px;
+  visibility: visible;
+  padding: 0 2rem;
+}
+
+@media screen and (width>600px) {
+  .upper {
+    background-image: url("./images/background-pattern-desktop.svg");
+  }
 }
